@@ -5,7 +5,7 @@ const corsConfig: CorsOptions = {
   // Using explicit origin instead of wildcard when credentials are used
   origin: process.env.NODE_ENV === 'production'
     ? 'https://*.pfb.ecole-89.com'
-    : process.env.FRONTEND_URL || 'http://localhost:3001', 
+    : ['http://localhost:3001', 'http://localhost'], 
   
   // Methods allowed
   methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH', 'OPTIONS'],

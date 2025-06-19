@@ -19,6 +19,8 @@ import routes from './routes';
 
 const app: Application = express();
 
+app.set('trust proxy', true); // Trust headers from reverse proxy
+
 // Middleware
 app.use(express.json());
 app.use(cookieParser());
