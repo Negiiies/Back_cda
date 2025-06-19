@@ -4,7 +4,7 @@ const corsConfig: CorsOptions = {
   // Origin configuration based on environment
   // Using explicit origin instead of wildcard when credentials are used
   origin: process.env.NODE_ENV === 'production'
-    ? 'https://*.pfb.ecole-89.com'
+    ? ['http://138.197.185.211', 'https://138.197.185.211']
     : ['http://localhost:3001', 'http://localhost'], 
   
   // Methods allowed
@@ -19,7 +19,7 @@ const corsConfig: CorsOptions = {
     'Authorization',
     'X-Requested-With',
     'Accept',
-    'X-CSRF-Token' // Add this header
+    'X-CSRF-Token'
   ],
   
   // Expose these headers to the client
