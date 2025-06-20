@@ -8,7 +8,7 @@
     "build": "tsc",
     "lint": "eslint src/**/*.ts",
     "format": "prettier --write \"src/**/*.ts\"",
-    "seed": "ts-node src/database/seeders/index.ts",
+    "seed": "ts-node -esm src/database/seeders/index.ts",
     "test:models": "ts-node src/tests/test-models.ts",
     "test:validators": "ts-node src/tests/test-validators.ts",
     "test": "jest --detectOpenHandles --forceExit",
