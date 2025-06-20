@@ -23,6 +23,7 @@ RUN yarn install --production --frozen-lockfile && yarn cache clean
 
 # Copy built application from builder stage
 COPY --from=builder /app/dist ./dist
+COPY --from=builder /app/src ./src
 
 # Set environment
 EXPOSE 3000
